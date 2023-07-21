@@ -17,6 +17,8 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import Avatar from '@mui/material/Avatar';
 import InfoDialogs from './infoDialg';
+import Button from '@mui/material/Button';
+import { useRouter } from 'next/router';
 
 const drawerWidth = 25;
 
@@ -46,7 +48,12 @@ const DrawerHeader = styled('div')(({ theme }) => ({
   justifyContent: 'flex-start',
 }));
 
+const navItems = [{name:'Home',href:'/'}, {name:'Sanad QR',href:'/sanadqr'}, {name:'About us',href:'/aboutus'}];
+
 export default function CustomDrawer() {
+
+  const router = useRouter()
+
   const theme = useTheme();
   const [open, setOpen] = useState(false);
   const [activeBtu, setActiveBtu] = useState(0);
@@ -81,6 +88,13 @@ export default function CustomDrawer() {
                 </div>
             </div>
           </Typography>
+          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+            {navItems.map((item) => (
+              <Button key={item.name} sx={{ color: '#fff' }} onClick={() => router.push(item.href)}>
+                {item.name}
+              </Button>
+            ))}
+          </Box>
           <IconButton
             color="inherit"
             aria-label="open drawer"

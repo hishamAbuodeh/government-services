@@ -8,7 +8,7 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 export default function MyCard({handleChange,data,index}) {
   return (
-    <Card sx={{ maxWidth: '30%', marginBottom:'2%' }}>
+    <Card sx={{ maxWidth: '29%', marginBottom:'2%', marginLeft:'2%', marginRight:'2%' }}>
       <CardActionArea>
         <CardMedia
           component="img"
