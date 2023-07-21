@@ -25,7 +25,7 @@ export default function Services({data}) {
   const showAlerts = (alerts) => {
     return alerts.map(alert => {
         return(
-            <Alert severity="warning">{alert}</Alert>
+            <Alert key={alert} severity="warning">{alert}</Alert>
         )
     })
   }
