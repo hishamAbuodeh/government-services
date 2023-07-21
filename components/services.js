@@ -46,7 +46,7 @@ export default function Services({data}) {
         setActiveStep(0);
     };
     return (
-        <Box sx={{maxWidth:'50%', width:'25%'}} dir="ltr">
+        <Box sx={{maxWidth:'50%', minWidth:'25%'}} dir="ltr">
           <Stepper activeStep={activeStep} orientation="vertical">
             {papers.map((paper, index) => (
               <Step key={paper.label}>
@@ -114,9 +114,13 @@ export default function Services({data}) {
             <AccordionDetails>
             <Stack sx={{ width: '100%' }} spacing={2}>
                 {showAlerts(ser.notes)}
-                <div style={{width:'100%',display:'flex',justifyContent:'center',alignItems:'center'}}>
-                    <NeededPapers papers={ser.neededPapers}/>
-                </div>
+                {ser.neededPapers.length > 0?
+                  <div style={{width:'100%',display:'flex',justifyContent:'center',alignItems:'center'}}>
+                      <NeededPapers papers={ser.neededPapers}/>
+                  </div>
+                :
+                  <></>
+                }
             </Stack>
             </AccordionDetails>
         </Accordion>

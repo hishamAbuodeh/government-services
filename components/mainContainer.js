@@ -39,7 +39,7 @@ export default function MainContainer() {
 
     const handleChange = (value,index) => {
         setValue(value)
-        if(index){
+        if(index >= 0){
             setInd(index)
         }
     }
@@ -67,7 +67,7 @@ export default function MainContainer() {
                     style={{height:'100%',width:'100%'}}
                 >
                     <TabPanel value={value} index={0} dir={theme.direction} style={{height:'100%',width:'100%'}}>
-                        <div style={{ height: '100%',width:'100%', display:'flex',justifyContent:'space-around',alignItems:'flex-start',flexWrap:'wrap'}}>
+                        <div style={{ height: '100%',width:'100%', display:'flex',justifyContent:'flex-end',alignItems:'flex-start',flexWrap:'wrap',marginTop:'3%'}}>
                             {showCards()}
                         </div>
                         <Divider sx={{fontWeight:'bold'}}/>
@@ -78,7 +78,7 @@ export default function MainContainer() {
                         </div> */}
                     </TabPanel>
                     <TabPanel value={value} index={1} dir={theme.direction} style={{height:'100%',width:'100%',}}>
-                        <Box sx={{ height: '100%',width:'100%', display:'flex',justifyContent:'center',alignItems:'center'}}>
+                        <Box style={{ height: '100%',width:'100%', display:'flex',justifyContent:'center',alignItems:'center',marginTop:'2%'}}>
                             <BaseCard title={data[ind].name} iconType={'arrow-left'} right={true} onClick={handleChange}>
                             <div style={{backgroundColor:'rgb(250,251,251)',padding:20,borderRadius:20}}>
                                 <Services data={data[ind].services}/>
