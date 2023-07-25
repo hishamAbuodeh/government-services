@@ -48,7 +48,7 @@ const DrawerHeader = styled('div')(({ theme }) => ({
   justifyContent: 'flex-start',
 }));
 
-const navItems = [{name:'Home',href:'/'}, {name:'Sanad QR',href:'/sanadqr'}, {name:'About us',href:'/aboutus'}];
+const navItems = [{name:'Home',href:'/'},{name:'Services',href:'services'},{name:'Sanad QR',href:'/sanadqr'}, {name:'About us',href:'/aboutus'}];
 
 export default function CustomDrawer() {
 
