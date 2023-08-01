@@ -19,6 +19,7 @@ import Avatar from '@mui/material/Avatar';
 import InfoDialogs from './infoDialg';
 import Button from '@mui/material/Button';
 import { useRouter } from 'next/router';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 const drawerWidth = 25;
 
@@ -67,6 +68,10 @@ export default function CustomDrawer() {
     setOpen(false);
   };
 
+  const handleChange = () => {
+    router.push('/')
+  }
+
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
@@ -76,35 +81,43 @@ export default function CustomDrawer() {
         <></>
       }
       <AppBar position="fixed" open={open} style={{background: 'rgb(1,1,13)',background: 'linear-gradient(90deg, rgba(1,1,13,1) 17%, rgba(242,7,7,1) 41%, rgba(9,131,48,1) 85%)'}}>
-        <Toolbar style={{height:'15vh'}}>
-          <Typography variant="h6" noWrap sx={{ flexGrow: 1, pt:'1%', pb:'1%' }} component="div">
+        <Toolbar style={{height:'15vh',flexDirection:'row',justifyContent:'space-between',alignItems:'center'}}>
+          <Typography variant="h6" noWrap sx={{ pt:'1%', pb:'1%' }} component="div">
             <div style={{display:'flex',flexDirection:'row',justifyContent:'flex-start',alignItems:'center'}}>
                 <Avatar
-                        src="https://scontent.famm5-1.fna.fbcdn.net/v/t39.30808-6/311827865_101968076043671_1927512417429538924_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=vrTWG0B4rgwAX-BqcC-&_nc_ht=scontent.famm5-1.fna&oh=00_AfB1uG5zYbtIUoKLaXblWmPfmn5QD_FzipEnHhvjHJvSug&oe=64BB6738"
+                        src="/images/gov.jpg"
                         sx={{ width: '8vh', height: '8vh' }}
                 />
-                <div style={{marginLeft:20}}>
-                    مركز الخدمات الحكومي
-                </div>
+                <Button size="large" sx={{flexGrow: 1}} style={{color:'#fff'}} dir="rtl"
+                    onClick={() => handleChange()}
+                >
+                  الرجوع
+                    <ArrowBackIcon style={{marginRight:10}}/>
+                </Button>
             </div>
           </Typography>
-          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-            {navItems.map((item) => (
-              <Button key={item.name} sx={{ color: '#fff' }} onClick={() => router.push(item.href)}>
-                {item.name}
-              </Button>
-            ))}
-          </Box>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="end"
-            onClick={handleDrawerOpen}
-            size='large'
-            sx={{ ...(open && { display: 'none' }) }}
-          >
-            <MenuIcon />
-          </IconButton>
+          <div style={{marginLeft:20}}>
+              مركز الخدمات الحكومي
+          </div>
+          <div style={{display:'flex',flexDirection:'row',justifyContent:'flex-start',alignItems:'center'}}>
+            <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+              {navItems.map((item) => (
+                <Button key={item.name} sx={{ color: '#fff' }} onClick={() => router.push(item.href)}>
+                  {item.name}
+                </Button>
+              ))}
+            </Box>
+            <IconButton
+              color="inherit"
+              aria-label="open drawer"
+              edge="end"
+              onClick={handleDrawerOpen}
+              size='large'
+              sx={{ ...(open && { display: 'none' }) }}
+            >
+              <MenuIcon />
+            </IconButton>
+          </div>
         </Toolbar>
       </AppBar>
       <Drawer
