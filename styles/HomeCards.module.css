@@ -3,7 +3,7 @@
   width:100%;
   font-family: Raleway, sans-serif;
   display: flex;
-  flex-direction:column;
+  flex-direction:row;
   align-items: center;
   justify-content:space-around;
   background-color: rgb(243, 246, 249);

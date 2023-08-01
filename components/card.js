@@ -16,7 +16,7 @@ export default function MyCard({handleChange,data,index}) {
           image={data.img}
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="div" dir="rtl">
+          <Typography gutterBottom variant="h6" component="div" dir="rtl">
             {data.name}
           </Typography>
           <Typography variant="body2" color="text.secondary" dir="rtl">
