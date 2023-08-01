@@ -16,7 +16,7 @@ export default function MyCard({handleChange,data,index}) {
           image={data.img}
         />
         <CardContent>
-          <Typography gutterBottom style={{fontSize:'15px'}} component="div" dir="rtl">
+          <Typography gutterBottom style={{fontSize:'15px',minHeight:'50px'}} component="div" dir="rtl">
             {data.name}
           </Typography>
           <Typography variant="body2" color="text.secondary" dir="rtl">
