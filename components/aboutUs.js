@@ -51,7 +51,7 @@ export default function AboutUs({data}) {
             </div>
             </AccordionSummary>
             <AccordionDetails>
-              <Typography>
+              <Typography style={{fontSize:'0.7rem'}}>
                   {qs.description}
               </Typography>
             </AccordionDetails>
