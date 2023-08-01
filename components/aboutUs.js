@@ -14,6 +14,7 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Chip from '@mui/material/Chip';
 import BaseCard from './baseCard';
+import { useRouter } from 'next/router';
 
 export default function AboutUs({data}) {
   // const theme = useTheme();
@@ -27,6 +28,11 @@ export default function AboutUs({data}) {
   // const handleBack = () => {
   //   setActiveStep((prevActiveStep) => prevActiveStep - 1);
   // };
+  const router = useRouter()
+
+  const handleChange = () => {
+    router.push('/')
+  }
 
   const showQuestions = () =>{
     return data.map((qs,index) => {
@@ -104,8 +110,8 @@ export default function AboutUs({data}) {
     //     }
     //   />
     // </Box>
-    <div style={{width:'60%',marginTop:'3%'}}>
-      <BaseCard title={'عن المركز'}>
+    <div style={{width:'85%',marginTop:'3%'}}>
+      <BaseCard title={'عن المركز'} iconType={'arrow-left'} right={true} onClick={handleChange}>
         {showQuestions()}
       </BaseCard>
     </div>
