@@ -14,7 +14,7 @@ export default function HomeCards(){
         <div className={styles.body}>
         <Card sx={{ width: '30%' }} dir='rtl' onClick={() =>router.push('/services')}>
         <CardContent>
-            <Typography gutterBottom variant="h4" sx={{textAlign:'center',verticalAlign:'center'}} component="div">
+            <Typography gutterBottom variant="h5" sx={{textAlign:'center',verticalAlign:'center'}} component="div">
             الخدمات
             </Typography>
         </CardContent>
@@ -24,7 +24,7 @@ export default function HomeCards(){
         </Card>
         <Card sx={{ width: '30%' }} dir='rtl' onClick={() =>router.push('/sanadqr')}>
         <CardContent>
-            <Typography gutterBottom variant="h4" sx={{textAlign:'center',verticalAlign:'center'}} component="div">
+            <Typography gutterBottom variant="h5" sx={{textAlign:'center',verticalAlign:'center'}} component="div">
             لتفعيل دورك
             </Typography>
         </CardContent>
@@ -34,7 +34,7 @@ export default function HomeCards(){
         </Card>
         <Card sx={{ width: '30%' }} dir='rtl' onClick={() =>router.push('aboutus')}>
         <CardContent>
-            <Typography gutterBottom variant="h4" sx={{textAlign:'center',verticalAlign:'center'}} component="div">
+            <Typography gutterBottom variant="h5" sx={{textAlign:'center',verticalAlign:'center'}} component="div">
             عن المركز
             </Typography>
         </CardContent>
