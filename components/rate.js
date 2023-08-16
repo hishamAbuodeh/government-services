@@ -47,7 +47,7 @@ export default function Rate(props){
                 aria-describedby="alert-dialog-slide-description"
             >
                 <DialogContent>
-                    <Typography variant="h4" sx={{textAlign:'center',verticalAlign:'center'}}>شكراعلى تقييم مركز الخدمات الحكومي</Typography>
+                    <Typography variant="h6" sx={{textAlign:'center',verticalAlign:'center'}}>شكراعلى تقييم مركز الخدمات الحكومي</Typography>
                 </DialogContent>
             </Dialog>
             <div style={{height:'85%', width:'100%', position:'absolute', top:'15%'}}>
@@ -62,7 +62,7 @@ export default function Rate(props){
                                 backgroundRepeat:'no-repeat'
                             }}
                         />
-                        <Typography variant="h3" sx={{width:'30vh',textAlign:'center',verticalAlign:'center'}}>رضاك يهمنا</Typography>
+                        <Typography variant="h5" sx={{width:'30vh',textAlign:'center',verticalAlign:'center'}}>رضاك يهمنا</Typography>
                         <div
                             style={{
                                 height:'30vh',
@@ -106,8 +106,8 @@ export default function Rate(props){
                         </Button>
                     </div>
                     <div style={{height:'35%',width:'90%',display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center',marginBottom:'3%'}}>
-                        <Typography variant="h3" sx={{width:'100%',textAlign:'center',verticalAlign:'center',marginBottom:'20px'}}>رايك مهم لتحسين مستوى الخدمة</Typography>
-                        <Typography variant="h5" sx={{width:'100%',textAlign:'center',verticalAlign:'center'}}>مركز الاتصال الوطني 065008080</Typography>
+                        <Typography variant="h5" sx={{width:'100%',textAlign:'center',verticalAlign:'center',marginBottom:'20px'}}>رايك مهم لتحسين مستوى الخدمة</Typography>
+                        <Typography sx={{width:'100%',textAlign:'center',verticalAlign:'center',fontSize:'15px'}}>مركز الاتصال الوطني 065008080</Typography>
                     </div>
                 </div>
             </div>

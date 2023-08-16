@@ -14,42 +14,42 @@ export default function HomeCards(){
         <div className={styles.body}>
             <Card sx={{ width: '40%' }} dir='rtl' onClick={() =>router.push('satisfaction')}>
             <CardContent>
-                <Typography gutterBottom variant="h5" sx={{textAlign:'center',verticalAlign:'center'}} component="div">
+                <Typography gutterBottom sx={{fontSize:'17px',textAlign:'center',verticalAlign:'center'}} component="div">
                 التقييم
                 </Typography>
             </CardContent>
             <CardActions sx={{width:'100%'}}>
-                <Button sx={{textAlign:'center',verticalAlign:'center',width:'100%'}} size="large">اضغط للمزيد <ArrowBackIcon style={{marginRight:10}}/></Button>
+                <Button sx={{fontSize:'13px',textAlign:'center',verticalAlign:'center',width:'100%'}} size="large">اضغط للمزيد <ArrowBackIcon style={{marginRight:10}}/></Button>
             </CardActions>
             </Card>
             <Card sx={{ width: '40%' }} dir='rtl' onClick={() =>router.push('/services')}>
             <CardContent>
-                <Typography gutterBottom variant="h5" sx={{textAlign:'center',verticalAlign:'center'}} component="div">
+                <Typography gutterBottom sx={{fontSize:'17px',textAlign:'center',verticalAlign:'center'}} component="div">
                 الخدمات
                 </Typography>
             </CardContent>
             <CardActions sx={{width:'100%'}}>
-                <Button sx={{textAlign:'center',verticalAlign:'center',width:'100%'}} size="large">اضغط للمزيد <ArrowBackIcon style={{marginRight:10}}/></Button>
+                <Button sx={{fontSize:'13px',textAlign:'center',verticalAlign:'center',width:'100%'}} size="large">اضغط للمزيد <ArrowBackIcon style={{marginRight:10}}/></Button>
             </CardActions>
             </Card>
             <Card sx={{ width: '40%' }} dir='rtl' onClick={() =>router.push('/sanadqr')}>
             <CardContent>
-                <Typography gutterBottom variant="h5" sx={{textAlign:'center',verticalAlign:'center'}} component="div">
+                <Typography gutterBottom sx={{fontSize:'17px',textAlign:'center',verticalAlign:'center'}} component="div">
                 لتفعيل دورك
                 </Typography>
             </CardContent>
             <CardActions sx={{width:'100%'}}>
-                <Button sx={{textAlign:'center',verticalAlign:'center',width:'100%'}} size="large">اضغط للمزيد <ArrowBackIcon style={{marginRight:10}}/></Button>
+                <Button sx={{fontSize:'13px',textAlign:'center',verticalAlign:'center',width:'100%'}} size="large">اضغط للمزيد <ArrowBackIcon style={{marginRight:10}}/></Button>
             </CardActions>
             </Card>
             <Card sx={{ width: '40%' }} dir='rtl' onClick={() =>router.push('aboutus')}>
             <CardContent>
-                <Typography gutterBottom variant="h5" sx={{textAlign:'center',verticalAlign:'center'}} component="div">
+                <Typography gutterBottom sx={{fontSize:'17px',textAlign:'center',verticalAlign:'center'}} component="div">
                 عن المركز
                 </Typography>
             </CardContent>
             <CardActions sx={{width:'100%'}}>
-                <Button sx={{textAlign:'center',verticalAlign:'center',width:'100%'}} size="large">اضغط للمزيد <ArrowBackIcon style={{marginRight:10}}/></Button>
+                <Button sx={{fontSize:'13px',textAlign:'center',verticalAlign:'center',width:'100%'}} size="large">اضغط للمزيد <ArrowBackIcon style={{marginRight:10}}/></Button>
             </CardActions>
             </Card>
     </div>
